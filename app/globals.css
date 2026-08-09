@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* 預設亮色模式的環境設定 */
+:root {
+  --background: #f8fafc; /* slate-50 */
+  --text: #0f172a;       /* slate-900 */
+  --card-bg: #ffffff;   /* 純白 */
+  --card-border: #e2e8f0; /* slate-200 */
+}
+
+/* 當 HTML 被加上 .dark 類別時，自動切換這些變數的顏色 */
+.dark {
+  --background: #020617; /* slate-955 */
+  --text: #f8fafc;       /* slate-50 */
+  --card-bg: #0f172a;    /* slate-900 */
+  --card-border: #1e293b; /* slate-800 */
+}
+
+/* 讓整張網頁的基底直接綁定這些變數 */
+body {
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
