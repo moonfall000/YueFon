@@ -44,12 +44,14 @@ export const contest = [
     about: "Advanced Placement Computer Science，檢測模式參考美國大學先修課程，為台灣資訊工程核心能力之重要指標。",
     official: "https://apcs.csie.ntnu.edu.tw/",
   },
+  /*
   {
-    name: "機電整合 / 電腦輔助製圖",
-    rank: "校內核心資歷",
-    about: "鑽研大一工程圖學與機電領域，打下機械工程師與硬體開發的紮實基本功。",
-    official: "https://example.com",
+    name: "",
+    rank: "",
+    about: "",
+    official: "",
   }
+  */
 ];
 
 // 6. social 模組：社群平台與外部聯絡管道 (對齊拼音並補上預防爆錯的空值)
@@ -68,12 +70,20 @@ export const tabinfo = {
       "中和高中2026畢業獎項 - 服務獎",
     ]
   },
-  技能: {
+  會一點的技能: {
     content: [
-      "",
-      "",
-      "",
-      ""
+      "Onshape",
+      "Blender",
+      "C",
+      "Vibe-coding",
+      "簡易魔術",
+      "樂高",
+      "Minecraft紅石機關",
+      "Minecraft指令(Java)",
+      "3D列印",
+      "簡易3D動畫",
+      "大型機具操作",
+      "網頁設計入門"
     ]
   },
   團隊參與: {
@@ -132,3 +142,12 @@ export const tabinfo = {
     ]
   }
 };
+
+
+
+
+//修改完於終端執行以下指令更新網站
+//git add .
+//git commit -m "update profile"
+//git push
+//網址:https://yue-fon.vercel.app/
