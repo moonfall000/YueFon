@@ -157,7 +157,7 @@ export const friends = [
     desc: "群除我佬，我是肺霧",
     image: "https://chuen666666.com/img/avatar.jpg" // 放圖片網址或位置
   },{
-    name: "YD",
+    name: "YD 楊光地",
     url: "https://www.kuang-ti.com",
     desc: "希望大佬不嫌棄我這個菜雞，等哪天有空我也會在我個網放你們的",
     image: "https://www.kuang-ti.com/logo.png" // 放圖片網址或位置
