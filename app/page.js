@@ -3,7 +3,9 @@ import { useState } from 'react';
 import { hero, about, project, contest, social, tabinfo, friends } from '../config';
 import { Analytics } from "@vercel/analytics/next"
 
-const avatarUrl = "/YueFon.png";
+
+// 💡 玥楓專屬全球公開圖片子網址
+const avatarUrl = "https://yue-fon.vercel.app/YueFon.png";
 
 
 export default function Home() {
@@ -28,7 +30,16 @@ export default function Home() {
             <a href={`mailto:${social.email}`} className="px-4 py-2 border rounded-md transition" style={{ borderColor: 'var(--card-border)' }}>Email Me</a>
           </div>
         </div>
-        <div className="w-44 h-44 bg-gradient-to-tr from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white text-6xl shadow-xl">🐱</div>
+                {/* 🛠️ 貓咪正式退場！換成能自動讀取最上方 avatarUrl 網址的真實大頭貼標籤 */}
+        <div className="w-44 h-44 rounded-full flex items-center justify-center text-6xl shadow-xl overflow-hidden shrink-0 border-4 transition-all duration-300" style={{ borderColor: 'var(--card-border)' }}>
+          <img 
+            src={avatarUrl} alt="玥楓" 
+            onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.innerText = '🐱'; }}
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/*<div className="w-44 h-44 bg-gradient-to-tr from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white text-6xl shadow-xl">🐱</div>*/}
       </header>
 
       {/* 2. About 關於我 */}
