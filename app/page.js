@@ -10,6 +10,8 @@ const avatarUrl = "https://yue-fon.vercel.app/YueFon.svg";
 
 export default function Home() {
   const categories = Object.keys(tabinfo);
+    // 補在 categories 下方：控制頭像放大狀態
+  const [isImageOpen, setIsImageOpen] = useState(false);
   const [activeTab, setActiveTab] = useState(categories[0]);
 
   return (
@@ -31,17 +33,35 @@ export default function Home() {
           </div>
         </div>
                 {/* 🛠️ 貓咪正式退場！換成能自動讀取最上方 avatarUrl 網址的真實大頭貼標籤 */}
-                {/* 🛠️ 大頭貼自由微調版：修改 '20px' 就可以控制圖片往下移的距離 */}
-        <div className="w-44 h-44 rounded-full flex items-center justify-center text-6xl shadow-xl overflow-hidden shrink-0 border-4 transition-all duration-300" style={{ borderColor: 'var(--card-border)' }}>
+                {/* 🛠️ 大頭貼自由微調版：修改 '??px' 就可以控制圖片往上下移的距離 */}
+                {/* 🛠️ 大頭貼區塊：點擊切換 isImageOpen 狀態 */}
+        <div 
+          onClick={() => setIsImageOpen(!isImageOpen)}
+          className="w-44 h-44 rounded-full flex items-center justify-center shadow-xl overflow-hidden shrink-0 border-4 cursor-pointer hover:scale-105 transition-all duration-300" 
+          style={{ borderColor: 'var(--card-border)' }}
+        >
           <img 
             src={avatarUrl} 
             alt="玥楓" 
             onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.innerText = '🐱'; }}
             className="w-full h-full object-cover" 
-            style={{ objectPosition: 'center -10px' }} // 💡 20px 代表「從頂部往下移動 20 像素」，你可以改成 10px、15px、30px 自己調到爽！
+            style={{ objectPosition: 'center -10px' }} //💡 20px 代表「從頂部往下移動 20 像素」，你可以改成 10px、15px、30px 自己調到爽！
           />
         </div>
 
+        {/* 💡 全螢幕放大燈箱：當狀態為 true 時在最上層彈出 */}
+        {isImageOpen && (
+          <div 
+            onClick={() => setIsImageOpen(false)}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm cursor-zoom-out"
+          >
+            <img 
+              src={avatarUrl} 
+              alt="完整頭像" 
+              className="max-w-[90vw] max-h-[85vh] rounded-lg shadow-2xl object-contain border border-slate-800"
+            />
+          </div>
+        )}
 
 
         {/*<div className="w-44 h-44 bg-gradient-to-tr from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white text-6xl shadow-xl">🐱</div>*/}
