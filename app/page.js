@@ -38,7 +38,7 @@ export default function Home() {
             alt="玥楓" 
             onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.innerText = '🐱'; }}
             className="w-full h-full object-cover" 
-            style={{ objectPosition: 'center 25px' }} // 💡 20px 代表「從頂部往下移動 20 像素」，你可以改成 10px、15px、30px 自己調到爽！
+            style={{ objectPosition: 'center 5px' }} // 💡 20px 代表「從頂部往下移動 20 像素」，你可以改成 10px、15px、30px 自己調到爽！
           />
         </div>
 
