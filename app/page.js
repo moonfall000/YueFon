@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/next"
 
 
 // 💡 玥楓專屬全球公開圖片子網址
-const avatarUrl = "https://yue-fon.vercel.app/YueFon.png";
+const avatarUrl = "https://yue-fon.vercel.app/YueFon.svg";
 
 
 export default function Home() {
