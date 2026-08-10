@@ -137,7 +137,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Contest 競賽資歷 */}
+            {/* 5. Contest 競賽資歷 (完美渲染 level 欄位版) */}
       <section id="contest" className="max-w-5xl mx-auto px-6 py-16 border-t" style={{ borderColor: 'var(--card-border)' }}>
         <h2 className="text-2xl font-bold mb-2">競賽與認證資歷</h2>
         <p className="text-sm opacity-50 uppercase tracking-wider mb-8">Contests & Certifications</p>
@@ -145,8 +145,14 @@ export default function Home() {
           {contest.map((item, index) => (
             <div key={index} className="p-5 rounded-lg border flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all duration-300" style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-border)' }}>
               <div>
-                <div className="flex items-center gap-3 mb-1">
+                <div className="flex flex-wrap items-center gap-3 mb-1">
                   <h3 className="text-md font-bold">{item.name}</h3>
+                  {/* 💡 這裡會自動去抓 item.level，並生出一個漂亮精緻的小標籤 */}
+                  {item.level && (
+                    <span className="px-2 py-0.5 bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 text-xs font-semibold rounded">
+                      {item.level}
+                    </span>
+                  )}
                   <span className="px-2 py-0.5 text-xs font-medium rounded border bg-amber-500/10 text-amber-500 border-amber-500/20">{item.rank}</span>
                 </div>
                 <p className="text-sm opacity-60">{item.about}</p>
@@ -156,6 +162,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+
             {/* 6. Friends 友情連結區塊 (完整頭像支援版) */}
       {friends && friends.length > 0 && (
         <section id="friends" className="max-w-5xl mx-auto px-6 py-16 border-t" style={{ borderColor: 'var(--card-border)' }}>

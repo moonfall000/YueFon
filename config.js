@@ -41,21 +41,25 @@ export const contest = [
   {
     name: "APCS 大學程式設計先修檢測",
     rank: "觀念 4 級 (前 3% ~ 20%)",
+    level: "全國檢定", // 💡 新增的級別標籤
     about: "Advanced Placement Computer Science，檢測模式參考美國大學先修課程，為台灣資訊工程核心能力之重要指標。",
     official: "https://apcs.csie.ntnu.edu.tw/",
   },{
     name: "FRC 全球高中生機器人競賽",
     rank: "2024賽季 洛杉磯區域賽",
+    level: "國際級", // 💡 新增的級別標籤
     about: "For Inspiration and Recognition of Science and Technology Robotics Competition",
     official: "https://www.firstinspires.org/programs/frc/",
   },{
     name: "FRC 全球高中生機器人競賽",
     rank: "2025賽季 台灣區域賽",
+    level: "國際級", // 💡 新增的級別標籤
     about: "For Inspiration and Recognition of Science and Technology Robotics Competition",
     official: "https://www.firstinspires.org/programs/frc/",
   },{
     name: "FRC 全球高中生機器人競賽",
     rank: "2026賽季 夏威夷區域賽",
+    level: "國際級", // 💡 新增的級別標籤
     about: "For Inspiration and Recognition of Science and Technology Robotics Competition",
     official: "https://www.firstinspires.org/programs/frc/",
   }
@@ -63,6 +67,7 @@ export const contest = [
   {
     name: "",
     rank: "",
+    level:"",
     about: "",
     official: "",
   }
@@ -103,7 +108,8 @@ export const tabinfo = {
   },
   團隊參與: {
     content: [
-      "2025中和FRC機器人校隊 - 副隊長、機構組組長",
+      "2025中和FRC機器人校隊 - 副隊長",
+      "2025中和FRC機器人校隊 - 機構組組長",
       "2026中和FRC機器人校隊 - Driver Team Coach",
       "程式貓科技教育社群 - 核心委員",
       "程式貓科技教育社群 - CodeCat AI - 專案主持人",
