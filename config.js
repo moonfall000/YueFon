@@ -152,10 +152,10 @@ export const friends = [
     image: "/CodeCat.png" // 放圖片網址或位置
   },
   {
-    name: "電神",
-    url: "https://example.com",
-    desc: "裝弱的電神朋友",
-    image: "/name.png" // 放圖片網址或位置
+    name: "淳",
+    url: "https://chuen666666.com",
+    desc: "群除我佬，我是肺霧",
+    image: "https://chuen666666.com/img/avatar.jpg" // 放圖片網址或位置
   },{
     name: "電神",
     url: "https://example.com",
