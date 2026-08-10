@@ -31,13 +31,16 @@ export default function Home() {
           </div>
         </div>
                 {/* 🛠️ 貓咪正式退場！換成能自動讀取最上方 avatarUrl 網址的真實大頭貼標籤 */}
+               {/* 🛠️ 大頭貼優化：加入 object-top 讓長圖自動靠頂部對齊，完美露出狼耳！ */}
         <div className="w-44 h-44 rounded-full flex items-center justify-center text-6xl shadow-xl overflow-hidden shrink-0 border-4 transition-all duration-300" style={{ borderColor: 'var(--card-border)' }}>
           <img 
-            src={avatarUrl} alt="玥楓" 
+            src={avatarUrl} 
+            alt="玥楓" 
             onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.innerText = '🐱'; }}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top" // 💡 關鍵字：在這裡加上 object-top
           />
         </div>
+
 
         {/*<div className="w-44 h-44 bg-gradient-to-tr from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white text-6xl shadow-xl">🐱</div>*/}
       </header>

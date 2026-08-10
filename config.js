@@ -186,3 +186,4 @@ export const friends = [
 //git commit -m "update profile"
 //git push
 //網址:https://yue-fon.vercel.app/
+//頭像網址:https://yue-fon.vercel.app/YueFon.png
