@@ -143,6 +143,21 @@ export const tabinfo = {
   }
 };
 
+// 8. friends 模組：友情連結列表（可自由增減朋友的網站）
+export const friends = [
+  {
+    name: "程式貓 CodeCat",
+    url: "https://codecat.tw",
+    desc: "科技教育社群",
+    image: "https://codecat.twassets/images/codecat_logo.png" // 放圖片網址
+  },
+  {
+    name: "朋友的名字或暱稱",
+    url: "https://example.com",
+    desc: "這裡可以寫一句話介紹你朋友的網站或專長",
+    image: "圖片網址" // 放圖片網址
+  }
+];
 
 
 

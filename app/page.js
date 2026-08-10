@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { hero, about, project, contest, social, tabinfo } from '../config';
+import { hero, about, project, contest, social, tabinfo, friends } from '../config';
 
 export default function Home() {
   const categories = Object.keys(tabinfo);
@@ -116,6 +116,44 @@ export default function Home() {
           ))}
         </div>
       </section>
+            {/* 6. Friends 友情連結區塊 (完整頭像支援版) */}
+      {friends && friends.length > 0 && (
+        <section id="friends" className="max-w-5xl mx-auto px-6 py-16 border-t" style={{ borderColor: 'var(--card-border)' }}>
+          <h2 className="text-2xl font-bold mb-2">友情連結</h2>
+          <p className="text-sm opacity-50 uppercase tracking-wider mb-8">Friends & Links</p>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {friends.map((friend, index) => (
+              <a 
+                key={index}
+                href={friend.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 rounded-xl border shadow-sm transition-all duration-300 hover:-translate-y-1 flex items-center gap-4 hover:border-emerald-500/50"
+                style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-border)' }}
+              >
+                {/* 1. 左側：朋友的大頭貼圖片，如果沒給網址或讀取失敗，會自動用 🔗 替代 */}
+                <div className="w-10 h-10 rounded-full flex items-center justify-center text-lg overflow-hidden shrink-0 bg-slate-500/10 border" style={{ borderColor: 'var(--card-border)' }}>
+                  <img 
+                    src={friend.image || "/globe.svg"} 
+                    alt="🔗" 
+                    onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.innerText = '🔗'; }}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                {/* 2. 右側：朋友網站名稱與簡介 */}
+                <div className="truncate">
+                  <div className="font-bold text-sm text-emerald-500 mb-0.5 truncate hover:text-emerald-400">
+                    {friend.name}
+                  </div>
+                  <p className="text-xs opacity-60 truncate">{friend.desc}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
 
     </div>
   );
