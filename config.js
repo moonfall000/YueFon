@@ -148,14 +148,34 @@ export const friends = [
   {
     name: "程式貓 CodeCat",
     url: "https://codecat.tw",
-    desc: "科技教育社群",
-    image: "https://codecat.twassets/images/codecat_logo.png" // 放圖片網址
+    desc: "程式貓科技教育社群",
+    image: "/CodeCat.png" // 放圖片網址或位置
   },
   {
-    name: "朋友的名字或暱稱",
+    name: "電神",
     url: "https://example.com",
-    desc: "這裡可以寫一句話介紹你朋友的網站或專長",
-    image: "圖片網址" // 放圖片網址
+    desc: "裝弱的電神朋友",
+    image: "/name.png" // 放圖片網址或位置
+  },{
+    name: "電神",
+    url: "https://example.com",
+    desc: "裝弱的電神朋友",
+    image: "/name.png" // 放圖片網址或位置
+  },{
+    name: "電神",
+    url: "https://example.com",
+    desc: "裝弱的電神朋友",
+    image: "/name.png" // 放圖片網址或位置
+  },{
+    name: "電神",
+    url: "https://example.com",
+    desc: "裝弱的電神朋友",
+    image: "/name.png" // 放圖片網址或位置
+  },{
+    name: "電神",
+    url: "https://example.com",
+    desc: "裝弱的電神朋友",
+    image: "/name.png" // 放圖片網址或位置
   }
 ];
 

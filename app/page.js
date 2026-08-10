@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { hero, about, project, contest, social, tabinfo, friends } from '../config';
+import { Analytics } from "@vercel/analytics/next"
 
 export default function Home() {
   const categories = Object.keys(tabinfo);
