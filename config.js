@@ -43,7 +43,22 @@ export const contest = [
     rank: "觀念 4 級 (前 3% ~ 20%)",
     about: "Advanced Placement Computer Science，檢測模式參考美國大學先修課程，為台灣資訊工程核心能力之重要指標。",
     official: "https://apcs.csie.ntnu.edu.tw/",
-  },
+  },{
+    name: "FRC 全球高中生機器人競賽",
+    rank: "2024賽季 洛杉磯區域賽",
+    about: "For Inspiration and Recognition of Science and Technology Robotics Competition",
+    official: "https://www.firstinspires.org/programs/frc/",
+  },{
+    name: "FRC 全球高中生機器人競賽",
+    rank: "2025賽季 台灣區域賽",
+    about: "For Inspiration and Recognition of Science and Technology Robotics Competition",
+    official: "https://www.firstinspires.org/programs/frc/",
+  },{
+    name: "FRC 全球高中生機器人競賽",
+    rank: "2026賽季 夏威夷區域賽",
+    about: "For Inspiration and Recognition of Science and Technology Robotics Competition",
+    official: "https://www.firstinspires.org/programs/frc/",
+  }
   /*
   {
     name: "",

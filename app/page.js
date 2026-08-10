@@ -87,7 +87,7 @@ export default function Home() {
 
       {/* 3. Tabinfo 程式貓經典分頁切換區塊 */}
       <section id="tabinfo" className="max-w-5xl mx-auto px-6 py-16 border-t" style={{ borderColor: 'var(--card-border)' }}>
-        <h2 className="text-2xl font-bold mb-2">核心摘要</h2>
+        <h2 className="text-2xl font-bold mb-2">摘要</h2>
         <p className="text-sm opacity-50 uppercase tracking-wider mb-8">Core Summary</p>
         
         <div className="flex gap-2 mb-6 border-b" style={{ borderColor: 'var(--card-border)' }}>
