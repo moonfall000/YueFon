@@ -126,14 +126,9 @@ export default function Home() {
               <div>
                 <h3 className="text-lg font-bold mb-2">{item.title}</h3>
                 <p className="text-sm mb-4 leading-relaxed opacity-70">{item.desc}</p>
-                <a 
-                key={index}
-                href={friend.url}
-                target="_blank"
-                rel="noopener noreferrer"
+                <a key={index} href={project.url} target="_blank" rel="noopener noreferrer" 
                 className="p-4 rounded-xl border shadow-sm transition-all duration-300 hover:-translate-y-1 flex items-center gap-4 hover:border-emerald-500/50"
-                style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-border)' }}
-              ></a>
+                style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-border)' }} ></a>
               </div>
               <div className="flex flex-wrap gap-1.5 mt-2">
                 {item.tech.map((t, idx) => (
