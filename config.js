@@ -24,9 +24,10 @@ export const about = {
 export const project = [
   {
     id: 1,
-    title: "專案1",
-    desc: "介紹",
-    tech: ["使用能力", "使用能力", "使用能力"],
+    title: "2048貓咪開箱傳說",
+    desc: "結合2048與開箱的小遊戲",
+    tech: ["不知道", "不知道", "不知道"],
+    url:"https://001-2048game.vercel.app/"
   },
   {
     id: 2,
