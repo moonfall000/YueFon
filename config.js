@@ -24,17 +24,17 @@ export const about = {
 export const project = [
   {
     id: 1,
-    title: "2048貓咪開箱傳說",
-    desc: "結合2048與開箱的小遊戲，可以透過2048獲得金幣和寶箱",
-    tech: ["不知道", "不知道", "不知道"],
-    url:"https://001-2048game.vercel.app/"
+    title: "個人網站",
+    desc: "不知道怎麼自我介紹，先寫著備用",
+    tech: ["Next.js", "React", "Vibe Coding"],
+    url:"https://yue-fon.vercel.app/"
   },
   {
     id: 2,
-    title: "專案2",
-    desc: "介紹",
-    tech: ["使用能力", "使用能力", "使用能力"],
-    url:""
+    title: "2048貓咪開箱傳說",
+    desc: "結合2048與開箱的小遊戲，可以透過2048獲得金幣和寶箱",
+    tech: ["Next.js", "React", "Vibe Coding"],
+    url:"https://001-2048game.vercel.app/"
   }
 ];
 
