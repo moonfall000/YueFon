@@ -210,6 +210,21 @@ export const friends = [
     url: "https://example.com",
     desc: "裝弱的電神朋友",
     image: "/name.png" // 放圖片網址或位置
+  },{
+    name: "電神",
+    url: "https://example.com",
+    desc: "裝弱的電神朋友",
+    image: "/name.png" // 放圖片網址或位置
+  },{
+    name: "電神",
+    url: "https://example.com",
+    desc: "裝弱的電神朋友",
+    image: "/name.png" // 放圖片網址或位置
+  },{
+    name: "電神",
+    url: "https://example.com",
+    desc: "裝弱的電神朋友",
+    image: "/name.png" // 放圖片網址或位置
   }
 ];
 
