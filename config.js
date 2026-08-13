@@ -171,6 +171,14 @@ export const tabinfo = {
 
 // 8. friends 模組：友情連結列表（可自由增減朋友的網站）
 export const friends = [
+  /*
+  {
+    name: "玥楓",
+    url: "https://yue-fon.vercel.app/",
+    desc: "我什麼都不會",//介紹
+    image: "https://yue-fon.vercel.app/YueFon.svg" // 放圖片網址或位置
+  },
+*/
   {
     name: "程式貓 CodeCat",
     url: "https://codecat.tw",
@@ -188,10 +196,10 @@ export const friends = [
     desc: "希望大佬不嫌棄我這個菜雞，等哪天有空我也會在我個網放你們的",
     image: "https://www.kuang-ti.com/logo.png" // 放圖片網址或位置
   },{
-    name: "電神",
-    url: "https://example.com",
-    desc: "裝弱的電神朋友",
-    image: "/name.png" // 放圖片網址或位置
+    name: "Steven",
+    url: "https://steventeng.uk",
+    desc: "好玩😊",
+    image: "https://steventeng.uk/steven-drawing.png" // 放圖片網址或位置
   },{
     name: "電神",
     url: "https://example.com",
