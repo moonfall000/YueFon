@@ -124,11 +124,9 @@ export default function Home() {
           {project.map((item) => (
             <div key={item.id} className="p-6 rounded-xl border shadow-sm transition-all duration-300 flex flex-col justify-between" style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-border)' }}>
               <div>
-                <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                <h3 className="text-lg font-bold mb-2">{item.url ? (<a href={item.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-emerald-500 transition-colors">{item.title} <span className="text-xs opacity-60">↗</span></a> ) : (item.title)}
+                </h3>
                 <p className="text-sm mb-4 leading-relaxed opacity-70">{item.desc}</p>
-                <a key={index} href={project.url} target="_blank" rel="noopener noreferrer" 
-                className="p-4 rounded-xl border shadow-sm transition-all duration-300 hover:-translate-y-1 flex items-center gap-4 hover:border-emerald-500/50"
-                style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-border)' }} ></a>
               </div>
               <div className="flex flex-wrap gap-1.5 mt-2">
                 {item.tech.map((t, idx) => (

@@ -34,6 +34,7 @@ export const project = [
     title: "專案2",
     desc: "介紹",
     tech: ["使用能力", "使用能力", "使用能力"],
+    url:""
   }
 ];
 
