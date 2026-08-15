@@ -35,6 +35,13 @@ export const project = [
     desc: "結合2048與開箱的小遊戲，可以透過2048獲得金幣和寶箱",
     tech: ["Next.js", "React", "Vibe Coding"],
     url:"https://001-2048game.vercel.app/"
+  },
+  {
+    id: 3,
+    title: "貓貓遊戲大廳",
+    desc: "放各種小遊戲的網站",
+    tech: ["Next.js", "React", "Vibe Coding"],
+    url:"https://gamesweb.vercel.app/"
   }
 ];
 
