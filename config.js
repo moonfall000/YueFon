@@ -39,7 +39,7 @@ export const project = [
   {
     id: 3,
     title: "貓貓遊戲大廳",
-    desc: "放各種小遊戲的網站",
+    desc: "放各種小遊戲的網站，尚在編寫中",
     tech: ["Next.js", "React", "Vibe Coding"],
     url:"https://meowmeowgamesweb.vercel.app/"
   }
