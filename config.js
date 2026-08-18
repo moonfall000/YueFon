@@ -169,7 +169,6 @@ export const tabinfo = {
       "欣興",
       "泰金寶-DR",
       
-      
     ]
   }
 };
