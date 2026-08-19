@@ -86,7 +86,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* 3. Tabinfo 摘要 */}
       <section id="tabinfo" className="max-w-5xl mx-auto px-6 py-16 border-t" style={{ borderColor: 'var(--card-border)' }}>
         <h2 className="text-2xl font-bold mb-2">摘要</h2>
@@ -100,7 +100,6 @@ export default function Home() {
               <button
                 key={cat}
                 onClick={() => setActiveTab(cat)}
-                {/* w-28 固定每個按鈕同寬，這樣橫線左右滑行時距離才會抓得百分之百精準 */}
                 className={`w-28 py-2 text-sm font-bold transition-colors duration-300 flex-shrink-0 z-10 ${
                   activeTab === cat ? 'text-emerald-500' : 'opacity-60 hover:opacity-100'
                 }`}
