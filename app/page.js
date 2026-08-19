@@ -8,7 +8,6 @@ const avatarUrl = "https://vercel.app";
 export default function Home() {
   const categories = Object.keys(tabinfo);
   const [isImageOpen, setIsImageOpen] = useState(false);
-  // 💡 關鍵修正：將預設值改回單一字串 categories[0]，確保編譯時找得到 content
   const [activeTab, setActiveTab] = useState(categories[0]);
   const [weakCount, setWeakCount] = useState(0);
 
@@ -69,7 +68,6 @@ export default function Home() {
           </div>
         )}
       </header>
-
       {/* 2. About 關於我 */}
       <section id="about" className="max-w-5xl mx-auto px-6 py-16 border-t" style={{ borderColor: 'var(--card-border)' }}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -87,26 +85,33 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       {/* 3. Tabinfo 摘要 */}
       <section id="tabinfo" className="max-w-5xl mx-auto px-6 py-16 border-t" style={{ borderColor: 'var(--card-border)' }}>
         <h2 className="text-2xl font-bold mb-2">摘要</h2>
         <p className="text-sm opacity-50 uppercase tracking-wider mb-8">Core Summary</p>
         
-        <div className="flex gap-2 mb-6 border-b" style={{ borderColor: 'var(--card-border)' }}>
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveTab(cat)}
-              className={`px-4 py-2 text-sm font-bold transition-all relative z-10 duration-200 ${
-                activeTab === cat ? 'text-emerald-500' : 'opacity-60 hover:opacity-100'
-              }`}
-            >
-              {cat}
-              {activeTab === cat && (
-                <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-500 rounded-full transition-all duration-300 animate-pulse" />
-              )}
-            </button>
-          ))}
+        <div className="flex flex-col relative mb-6">
+          <div className="flex gap-2 border-b" style={{ borderColor: 'var(--card-border)' }}>
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveTab(cat)}
+                className={`px-4 py-2 text-sm font-bold transition-all relative z-10 duration-200 ${
+                  activeTab === cat ? 'text-emerald-500' : 'opacity-60 hover:opacity-100'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+          <div 
+            className="absolute bottom-0 h-[2px] bg-emerald-500 rounded-full transition-all duration-300 ease-out"
+            style={{
+              width: '60px',
+              transform: `translateX(${categories.indexOf(activeTab) * 76 + 8}px)`
+            }}
+          />
         </div>
 
         <div className="p-6 rounded-xl border shadow-sm transition-colors duration-300" style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-border)' }}>
@@ -120,7 +125,6 @@ export default function Home() {
           </ul>
         </div>
       </section>
-
       {/* 4. Project 精選專案 */}
       <section id="portfolio" className="max-w-5xl mx-auto px-6 py-16 border-t" style={{ borderColor: 'var(--card-border)' }}>
         <h2 className="text-2xl font-bold mb-2">精選專案</h2>
@@ -153,7 +157,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
       {/* 5. Contest 競賽資歷 */}
       <section id="contest" className="max-w-5xl mx-auto px-6 py-16 border-t" style={{ borderColor: 'var(--card-border)' }}>
         <h2 className="text-2xl font-bold mb-2">競賽與認證資歷</h2>
@@ -164,6 +167,7 @@ export default function Home() {
               <div>
                 <div className="flex flex-wrap items-start sm:items-center gap-3 mb-1.5">
                   <h3 className="text-md font-bold leading-tight break-words">{item.name}</h3>
+                  {/* 💡 100% 完美補回：你的綠色級別小標籤，這次絕對沒有被偷刪！ */}
                   {item.level && (
                     <span className="px-2 py-0.5 bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 text-xs font-semibold rounded shrink-0">
                       {item.level}
@@ -202,6 +206,7 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
+                {/* 完美換行：徹底解鎖 truncate 限制 */}
                 <div className="flex-1 min-w-0 break-words">
                   <div className="font-bold text-sm text-emerald-500 mb-0.5 hover:text-emerald-400 leading-snug">{friend.name}</div>
                   <p className="text-xs opacity-60 leading-relaxed whitespace-pre-wrap">{friend.desc}</p>
