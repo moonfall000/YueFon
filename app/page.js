@@ -86,31 +86,37 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      
       {/* 3. Tabinfo 摘要 */}
       <section id="tabinfo" className="max-w-5xl mx-auto px-6 py-16 border-t" style={{ borderColor: 'var(--card-border)' }}>
         <h2 className="text-2xl font-bold mb-2">摘要</h2>
         <p className="text-sm opacity-50 uppercase tracking-wider mb-8">Core Summary</p>
         
-        {/* 💡 終極動態滑軌：overflow-x-auto 允許左右滑動，whitespace-nowrap 強制絕對不換行，scrollbar-none 隱藏滾動條 */}
-        <div className="w-full overflow-x-auto whitespace-nowrap border-b relative mb-6 select-none" style={{ borderColor: 'var(--card-border)', scrollbarWidth: 'none' }}>
-          <div className="flex gap-2 min-w-full">
+        {/* 磁浮滑軌外框：overflow-x-auto 允許手機版滑動，relative 讓底線絕對定位 */}
+        <div className="w-full overflow-x-auto border-b relative mb-6 select-none" style={{ borderColor: 'var(--card-border)', scrollbarWidth: 'none' }}>
+          {/* 使用 flex 讓按鈕並排，不鎖死 grid-cols，未來在 config.js 新增幾個分頁都會自動完美排成一列 */}
+          <div className="flex relative pb-2">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveTab(cat)}
-                className={`px-4 py-2 text-sm font-bold relative flex-shrink-0 transition-all duration-300 ${
+                {/* w-28 固定每個按鈕同寬，這樣橫線左右滑行時距離才會抓得百分之百精準 */}
+                className={`w-28 py-2 text-sm font-bold transition-colors duration-300 flex-shrink-0 z-10 ${
                   activeTab === cat ? 'text-emerald-500' : 'opacity-60 hover:opacity-100'
                 }`}
               >
                 {cat}
-                <span 
-                  className={`absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-500 rounded-full transition-all duration-300 ease-out origin-center ${
-                    activeTab === cat ? 'scale-x-100 opacity-100' : 'scale-x-0 opacity-0'
-                  }`} 
-                />
               </button>
             ))}
+            
+            {/* 💡 真正會滑動的獨立橫線：寬度完美吃滿一個按鈕（w-28），用 categories.indexOf(activeTab) 算出當前位置，純 CSS 左右流暢滑過去！ */}
+            <div 
+              className="absolute bottom-0 h-[2px] bg-emerald-500 transition-all duration-300 ease-out"
+              style={{
+                width: '112px', // 對齊按鈕的 w-28 (28 * 4 = 112px)
+                transform: `translateX(${categories.indexOf(activeTab) * 112}px)`
+              }}
+            />
           </div>
         </div>
 
