@@ -4,7 +4,7 @@ import { hero, about, project, contest, social, tabinfo, friends } from '../conf
 import { Analytics } from "@vercel/analytics/next"
 
 // 💡 頭像網址（你可以隨時換成你親手連好的正確子網址）
-const avatarUrl = "https://yue-fon.vercel.app/YueFon.png";
+const avatarUrl = "https://yue-fon.vercel.app/YueFon.svg";
 
 export default function Home() {
   const categories = Object.keys(tabinfo);
@@ -27,7 +27,7 @@ export default function Home() {
               onClick={() => {
                 const nextCount = weakCount + 1;
                 setWeakCount(nextCount);
-                if (nextCount === 100) alert("🎉 恭喜您已成功認證低調裝弱行為！");
+                if (nextCount === 100) alert("🎉 恭喜！您已成功認證全校前 1% 生活科技大佬的低調裝弱行為！");
               }}
               className="px-3 py-1.5 text-xs font-bold rounded-full border bg-emerald-500/10 text-emerald-500 border-emerald-500/20 hover:bg-emerald-500/20 active:scale-95 transition-all duration-200"
             >
@@ -92,24 +92,29 @@ export default function Home() {
         <h2 className="text-2xl font-bold mb-2">摘要</h2>
         <p className="text-sm opacity-50 uppercase tracking-wider mb-8">Core Summary</p>
         
-        <div className="flex gap-2 mb-6 border-b relative" style={{ borderColor: 'var(--card-border)' }}>
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveTab(cat)}
-              className={`px-4 py-2 text-sm font-bold relative transition-all duration-300 ${
-                activeTab === cat ? 'text-emerald-500' : 'opacity-60 hover:opacity-100'
-              }`}
-            >
-              {cat}
-              {/* 💡 100% 精準對齊機制：直接鎖死在按鈕底部，用 scale-x 動態展開與收縮，永不脫軌跑位 */}
-              <span 
-                className={`absolute bottom-0 left-4 right-4 h-[2px] bg-emerald-500 rounded-full transition-all duration-300 ease-out origin-center ${
-                  activeTab === cat ? 'scale-x-100' : 'scale-x-0'
-                }`} 
-              />
-            </button>
-          ))}
+        {/* 💡 獨立滑軌外框 */}
+        <div className="relative mb-6 border-b" style={{ borderColor: 'var(--card-border)' }}>
+          <div className="grid grid-cols-6 w-full text-center">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveTab(cat)}
+                className={`py-2 text-sm font-bold transition-colors duration-300 relative z-10 ${
+                  activeTab === cat ? 'text-emerald-500' : 'opacity-60 hover:opacity-100'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+          {/* 💡 百分比自適應滑動橫線：寬度自動佔滿一個按鈕，點擊時平滑橫向溜過去，亮起時邊緣剛好互相碰到 */}
+          <div 
+            className="absolute bottom-0 h-[2px] bg-emerald-500 transition-transform duration-300 ease-out"
+            style={{
+              width: `${100 / categories.length}%`,
+              transform: `translateX(${categories.indexOf(activeTab) * 100}%)`
+            }}
+          />
         </div>
 
         <div className="p-6 rounded-xl border shadow-sm transition-colors duration-300" style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-border)' }}>
