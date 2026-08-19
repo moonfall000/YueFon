@@ -30,7 +30,7 @@ export default function Home() {
             <a href={social.github} target="_blank" className="px-4 py-2 bg-slate-800 text-white rounded-md hover:bg-slate-700 border border-slate-700 transition">GitHub</a>
             {/*<a href={social.linkedin} target="_blank" className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-500 transition">LinkedIn</a>
             */}
-            <a href={`mailto:${social.email}`} className="px-4 py-2 border rounded-md transition" style={{ borderColor: 'var(--card-border)' }}>Email Me</a>
+            <a href={`mailto:${social.gmail}`} className="px-4 py-2 border rounded-md transition" style={{ borderColor: 'var(--card-border)' }}>Gmail</a>
           </div>
         </div>
                 {/* 🛠️ 貓咪正式退場！換成能自動讀取最上方 avatarUrl 網址的真實大頭貼標籤 */}
