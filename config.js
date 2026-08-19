@@ -206,10 +206,10 @@ export const friends = [
     desc: "好玩😊",
     image: "https://steventeng.uk/steven-drawing.png" // 放圖片網址或位置
   },{
-    name: "電神",
-    url: "https://example.com",
-    desc: "裝弱的電神朋友",
-    image: "/name.png" // 放圖片網址或位置
+    name: "baihu",
+    url: "https://www.instgram.com/baihu3210",
+    desc: "什麼都不會",
+    image: "./public/baihu_smallboygirl.png" // 放圖片網址或位置
   },{
     name: "電神",
     url: "https://example.com",
