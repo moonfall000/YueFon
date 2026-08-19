@@ -3,7 +3,8 @@ import { useState } from 'react';
 import { hero, about, project, contest, social, tabinfo, friends } from '../config';
 import { Analytics } from "@vercel/analytics/next"
 
-const avatarUrl = "https://vercel.app";
+// 💡 頭像網址（你可以隨時換成你親手連好的正確子網址）
+const avatarUrl = "https://yue-fon.vercel.app/YueFon.png";
 
 export default function Home() {
   const categories = Object.keys(tabinfo);
@@ -26,7 +27,7 @@ export default function Home() {
               onClick={() => {
                 const nextCount = weakCount + 1;
                 setWeakCount(nextCount);
-                if (nextCount === 100) alert("🎉 恭喜！您已成功認證全校前 1% 生活科技大佬的低調裝弱行為！");
+                if (nextCount === 100) alert("🎉 恭喜您已成功認證低調裝弱行為！");
               }}
               className="px-3 py-1.5 text-xs font-bold rounded-full border bg-emerald-500/10 text-emerald-500 border-emerald-500/20 hover:bg-emerald-500/20 active:scale-95 transition-all duration-200"
             >
@@ -91,27 +92,24 @@ export default function Home() {
         <h2 className="text-2xl font-bold mb-2">摘要</h2>
         <p className="text-sm opacity-50 uppercase tracking-wider mb-8">Core Summary</p>
         
-        <div className="flex flex-col relative mb-6">
-          <div className="flex gap-2 border-b" style={{ borderColor: 'var(--card-border)' }}>
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveTab(cat)}
-                className={`px-4 py-2 text-sm font-bold transition-all relative z-10 duration-200 ${
-                  activeTab === cat ? 'text-emerald-500' : 'opacity-60 hover:opacity-100'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-          <div 
-            className="absolute bottom-0 h-[2px] bg-emerald-500 rounded-full transition-all duration-300 ease-out"
-            style={{
-              width: '60px',
-              transform: `translateX(${categories.indexOf(activeTab) * 76 + 8}px)`
-            }}
-          />
+        <div className="flex gap-2 mb-6 border-b relative" style={{ borderColor: 'var(--card-border)' }}>
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveTab(cat)}
+              className={`px-4 py-2 text-sm font-bold relative transition-all duration-300 ${
+                activeTab === cat ? 'text-emerald-500' : 'opacity-60 hover:opacity-100'
+              }`}
+            >
+              {cat}
+              {/* 💡 100% 精準對齊機制：直接鎖死在按鈕底部，用 scale-x 動態展開與收縮，永不脫軌跑位 */}
+              <span 
+                className={`absolute bottom-0 left-4 right-4 h-[2px] bg-emerald-500 rounded-full transition-all duration-300 ease-out origin-center ${
+                  activeTab === cat ? 'scale-x-100' : 'scale-x-0'
+                }`} 
+              />
+            </button>
+          ))}
         </div>
 
         <div className="p-6 rounded-xl border shadow-sm transition-colors duration-300" style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-border)' }}>
@@ -167,7 +165,6 @@ export default function Home() {
               <div>
                 <div className="flex flex-wrap items-start sm:items-center gap-3 mb-1.5">
                   <h3 className="text-md font-bold leading-tight break-words">{item.name}</h3>
-                  {/* 💡 100% 完美補回：你的綠色級別小標籤，這次絕對沒有被偷刪！ */}
                   {item.level && (
                     <span className="px-2 py-0.5 bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 text-xs font-semibold rounded shrink-0">
                       {item.level}
@@ -206,7 +203,6 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                {/* 完美換行：徹底解鎖 truncate 限制 */}
                 <div className="flex-1 min-w-0 break-words">
                   <div className="font-bold text-sm text-emerald-500 mb-0.5 hover:text-emerald-400 leading-snug">{friend.name}</div>
                   <p className="text-xs opacity-60 leading-relaxed whitespace-pre-wrap">{friend.desc}</p>
