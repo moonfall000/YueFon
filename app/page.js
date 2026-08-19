@@ -8,7 +8,8 @@ const avatarUrl = "https://vercel.app";
 export default function Home() {
   const categories = Object.keys(tabinfo);
   const [isImageOpen, setIsImageOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState(categories);
+  // 💡 關鍵修正：將預設值改回單一字串 categories[0]，確保編譯時找得到 content
+  const [activeTab, setActiveTab] = useState(categories[0]);
   const [weakCount, setWeakCount] = useState(0);
 
   return (
@@ -161,7 +162,7 @@ export default function Home() {
           {contest.map((item, index) => (
             <div key={index} className="p-5 rounded-lg border flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all duration-300" style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-border)' }}>
               <div>
-                <div className="flex flex-wrap items-start sm:items-center gap-3 mb-1. rails">
+                <div className="flex flex-wrap items-start sm:items-center gap-3 mb-1.5">
                   <h3 className="text-md font-bold leading-tight break-words">{item.name}</h3>
                   {item.level && (
                     <span className="px-2 py-0.5 bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 text-xs font-semibold rounded shrink-0">
