@@ -28,7 +28,8 @@ export default function Home() {
             {/* 修改為：Instagram 專屬科技感炫彩漸層按鈕 */}
             <a href={social.instagram} target="_blank" className="px-4 py-2 bg-gradient-to-r from-amber-500 via-pink-500 to-purple-600 text-white font-medium rounded-md shadow-lg shadow-pink-500/10 hover:shadow-pink-500/30 hover:brightness-110 active:scale-95 transition-all duration-200 border border-transparent">Instagram</a>
             <a href={social.github} target="_blank" className="px-4 py-2 bg-slate-800 text-white rounded-md hover:bg-slate-700 border border-slate-700 transition">GitHub</a>
-            <a href={social.linkedin} target="_blank" className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-500 transition">LinkedIn</a>
+            {/*<a href={social.linkedin} target="_blank" className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-500 transition">LinkedIn</a>
+            */}
             <a href={`mailto:${social.email}`} className="px-4 py-2 border rounded-md transition" style={{ borderColor: 'var(--card-border)' }}>Email Me</a>
           </div>
         </div>

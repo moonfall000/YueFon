@@ -86,9 +86,9 @@ export const contest = [
 // 6. social 模組：社群平台與外部聯絡管道 (對齊拼音並補上預防爆錯的空值)
 export const social = {
   instagram: "https://www.instagram.com/liu_senryckey/",
-  github: "https://github.com",
-  linkedin: "https://linkedin.com",
-  email: "your-email@example.com",
+  github: "https://github.com/moonfall000",
+  //linkedin: "https://linkedin.com",
+  gmail: "yf@codecat.tw",
 };
 
 // 7. tabinfo 模組：分頁籤資訊（切換展示比賽、技能、團隊）
@@ -99,7 +99,7 @@ export const tabinfo = {
       "中和高中2026畢業獎項 - 服務獎",
     ]
   },
-  會一點的技能: {
+  技能: {
     content: [
       "Onshape",
       "Blender",
@@ -163,13 +163,11 @@ export const tabinfo = {
       "台達電",
       "台光電",
       "聯發科",
-      "竹陞科技",
       "凌華",
       "微星",
       "瑞昱",
       "鴻海",
       "緯穎",
-      "欣興",
       "泰金寶-DR",
       
     ]
