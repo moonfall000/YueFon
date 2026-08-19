@@ -27,7 +27,7 @@ export default function Home() {
               onClick={() => {
                 const nextCount = weakCount + 1;
                 setWeakCount(nextCount);
-                if (nextCount === 100) alert("🎉 恭喜！您已成功認證全校前 1% 生活科技大佬的低調裝弱行為！");
+                if (nextCount === 100) alert("🎉 恭喜！您已成功認證低調裝弱行為！");
               }}
               className="px-3 py-1.5 text-xs font-bold rounded-full border bg-emerald-500/10 text-emerald-500 border-emerald-500/20 hover:bg-emerald-500/20 active:scale-95 transition-all duration-200"
             >
