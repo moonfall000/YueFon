@@ -93,7 +93,7 @@ export const social = {
 
 // 7. tabinfo 模組：分頁籤資訊（切換展示比賽、技能、團隊）
 export const tabinfo = {
-  獎項、其他: {
+  獎排: {
     content: [
       "中和高中2026畢業獎項 - 校長獎（全校僅三位）",
       "中和高中2026畢業獎項 - 服務獎",
@@ -138,7 +138,7 @@ export const tabinfo = {
       "其他一些小遊戲"
     ]
   },
-  社群媒體: {
+  社群: {
     content: [
       "Line",
       "Facebook",
