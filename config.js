@@ -32,9 +32,10 @@ export const project = [
   {
     id: 2,
     title: "2048貓咪開箱傳說",
-    desc: "結合2048與開箱的小遊戲，可以透過2048獲得金幣和寶箱",
+    desc: "結合2048與開箱的小遊戲，可以透過2048獲得金幣和寶箱，本遊戲已遷移到個人網站子網，暫時仍可以透過舊網址加入遊戲。",
     tech: ["Next.js", "React", "Vibe Coding"],
-    url:"https://001-2048game.vercel.app/"
+    //url:"https://001-2048game.vercel.app/"
+    url:"https://yue-fon.vercel.app/2048catopenbox"
   },
   {
     id: 3,

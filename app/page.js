@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { hero, about, project, contest, social, tabinfo, friends } from '../config';
 import { Analytics } from "@vercel/analytics/next"
+import Announcement from './Announcement';
 
 // 💡 頭像網址（你可以隨時換成你親手連好的正確子網址）
 const avatarUrl = "https://yue-fon.vercel.app/YueFon.svg";
@@ -69,6 +70,10 @@ export default function Home() {
           </div>
         )}
       </header>
+      
+      {/*公告欄位*/}
+      <Announcement />
+
       {/* 2. About 關於我 */}
       <section id="about" className="max-w-5xl mx-auto px-6 py-16 border-t" style={{ borderColor: 'var(--card-border)' }}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
