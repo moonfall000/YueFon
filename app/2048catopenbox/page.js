@@ -236,7 +236,7 @@ export default function Game() {
     setIsAuthLoading(true);
 
     try {
-              const { supabase } = await import('../lib/supabase');
+              const { supabase } = await import('./supabase');
 
       if (authMode === 'register') {
         if (!authInput.username) { setIsAuthLoading(false); return alert("註冊請填寫玩家暱稱！"); }
@@ -306,7 +306,7 @@ export default function Game() {
 
   // 登出函式
   const handleLogout = async () => {
-            const { supabase } = await import('../lib/supabase');
+            const { supabase } = await import('./supabase');
 
     await supabase.auth.signOut(); setUser(null);
     localStorage.clear(); window.location.reload(); // 清空單機殘留並重新整理
@@ -380,7 +380,7 @@ export default function Game() {
     // 建立一個防抖/延時上傳，避免玩家玩 2048 按太快導致頻繁呼叫雲端資料庫卡死
     const syncCloudData = async () => {
       try {
-                const { supabase } = await import('../lib/supabase');
+                const { supabase } = await import('./supabase');
 
           // 🌌 終極修正：天賦鋼鐵防空鎖！確保攻擊、防禦、生命三個天賦在 React 記憶體中 100% 安全落地，否則絕對攔截、拒絕上傳！
           if (talentLevels && (talentLevels["攻擊天賦"] === undefined || talentLevels["防禦天賦"] === undefined || talentLevels["生命天賦"] === undefined)) {
@@ -429,7 +429,7 @@ export default function Game() {
     const fetchAllPlayersAndRank = async () => {
       let mergedList = [];
       try {
-        const { supabase } = await import('../lib/supabase');
+        const { supabase } = await import('./supabase');
         const { data, error } = await supabase.from('profiles').select('username, power, id').order('power', { ascending: false });
         if (!error && data) {
           mergedList = data.map(p => ({ name: p.username, power: p.power, isPlayer: p.id === user.id }));
