@@ -1,0 +1,40 @@
+註冊：建立一個安全的 Email 密碼帳號，並同時在你的 profiles 資料表塞入初始 500 金幣、100 寶箱和乾淨的 4x4 棋盤。
+登入：驗證玩家身分，並把雲端上儲存的戰力、金幣、裝備通通同步載入到網頁畫面中！
+
+
+
+Publishable key
+This key is safe to use in a browser if you have enabled Row Level Security (RLS) for your tables and configured policies.
+
+
+New publishable key
+Name	API Key	
+default
+No description
+公鑰
+******************************************************
+sb_publishable_VrL0LdNl9UYvWVabWmFjdg_kE44uaV-
+******************************************************
+
+Publishable keys can be safely shared publicly
+
+Secret keys
+These API keys allow privileged access to your project's APIs. Use in servers, functions, workers or other backend components of your application.
+
+
+New secret key
+Name	API Key	
+default
+No description
+私鑰
+******************************************************
+sb_secret_mjLnr
+sm4FEqoEJ3gPuCllQ_gIGA8kJZ
+******************************************************
+
+Project URL:
+******************************************************
+https://ubegqlscawnypsqmjimr.supabase.co/rest/v1/
+https://ubegqlscawnypsqmjimr.supabase.co
+******************************************************
+

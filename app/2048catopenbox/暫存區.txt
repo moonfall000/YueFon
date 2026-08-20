@@ -1,0 +1,36 @@
+//清除舊的終端背景執行 可以還原至http://localhost:3000
+Stop-Process -Name "node" -Force -ErrorAction SilentlyContinue
+npm run dev
+日誌
+//2026/8/13 23:03此版本為基礎Beta版本 要回溯可用此版本 擁有正確連線排行榜及變動的貓咪戰力共100隻
+
+
+//在supabase SQL Editor
+
+UPDATE public.profiles 
+SET 
+    username = '玥楓',
+    gold = coalesce(gold, 999999999999),          -- 如果是空，強行補回 9999.99999999 億金幣
+    chest_count = coalesce(chest_count, 999999),  -- 如果是空，強行補回 99.9999 萬寶箱庫存
+    chest_level = coalesce(chest_level, 40),      -- 如果是空，強行補回 30 級神壇
+    
+    -- 確保高階 JSON 欄位完全不是空，而是最安全合法的空物件與空矩陣
+    forge_levels = '{"武器": 3600, "頭盔": 120, "胸甲": 120, "鞋子": 120}'::jsonb,
+    talent_levels = '{"攻擊天賦": 360, "防禦天賦": 0, "生命天賦": 1000}'::jsonb
+
+WHERE id = 'eb4501ef-4099-4b90-bbcd-3a1c2fefeab0'::uuid;
+
+--要留下來的
+
+UPDATE public.profiles 
+SET 
+    username = 'YF',
+    gold = coalesce(gold, 6531280292),          -- 如果是空，強行補回 金幣
+    chest_count = coalesce(chest_count, 935810),  -- 如果是空，強行補回 寶箱
+    chest_level = coalesce(chest_level, 35),      -- 如果是空，強行補回 神壇
+    
+    -- 確保高階 JSON 欄位完全不是空，而是最安全合法的空物件與空矩陣
+    forge_levels = '{"武器": 1600, "頭盔": 360, "胸甲": 360, "鞋子": 360}'::jsonb,
+    talent_levels = '{"攻擊天賦": 36, "防禦天賦": 0, "生命天賦": 100}'::jsonb
+
+WHERE id = 'b5949cf8-5e8a-4278-b06d-5211b853f0e2'::uuid;

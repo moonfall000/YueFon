@@ -1,0 +1,15 @@
+BEGIN;
+
+-- 🌌 終極救贖：因為 YF 帳號缺少頭盔與鞋子導致前端 color 崩潰。
+-- 我們直接把 YF 和 玥楓 的裝備欄位在雲端強行重置為最乾淨、最安全的空物件 '{}'！
+-- 這樣一來，前端解構指針 100% 絕對抓不到 undefined，崩潰黑屏當場灰飛煙滅！
+
+UPDATE public.profiles 
+SET equipped = '{}'::jsonb
+WHERE id = 'b5949cf8-5e8a-4278-b06d-5211b853f0e2'::uuid; -- YF 帳號
+
+UPDATE public.profiles 
+SET equipped = '{}'::jsonb
+WHERE id = 'eb4501ef-4099-4b90-bbcd-3a1c2fefeab0'::uuid; -- 玥楓 帳號
+
+COMMIT;
