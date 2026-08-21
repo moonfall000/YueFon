@@ -25,3 +25,4 @@ git commit -m "feat: masterfully resolve nested git and fuse 2048 supabase analy
 git commit -m "style: keep dual gitignore insurance and fix production routing"
 //2026/8/21 晚上 將公告欄位新增跑馬燈 並移到導航列下方置頂 放到layout.js裡面
 git commit -m "style: embed marquee announcement into native client root layout"
+git commit -m "修正公告距離上方位置避免擋住導航列"
