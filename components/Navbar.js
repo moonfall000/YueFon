@@ -54,6 +54,5 @@ export default function Navbar() {
       </div>
     </nav>
   );
-  {/*公告欄位*/}
-  <Announcement />
+  
 }

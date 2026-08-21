@@ -22,3 +22,9 @@ body {
   color: var(--text);
   transition: background-color 0.3s, color 0.3s;
 }
+
+/*公告跑馬燈*/
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
