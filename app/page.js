@@ -71,8 +71,6 @@ export default function Home() {
         )}
       </header>
       
-      {/*公告欄位*/}
-      <Announcement />
 
       {/* 2. About 關於我 */}
       <section id="about" className="max-w-5xl mx-auto px-6 py-16 border-t" style={{ borderColor: 'var(--card-border)' }}>
