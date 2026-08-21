@@ -3,13 +3,13 @@
 
 export default function Announcement() {
   // 🎨 十六進位色碼控制面板（你可以隨時修改這 6 個字元的色碼）
-  const mainColor = '#fcc846';     // 主要文字顏色
-  const borderColor = '#f5b70bba'; // 上下細線顏色 (66 代表 40% 透明度)
-  const bgColor = '#f59f0b0f';     // 背景暈染顏色 (1a 代表 10% 透明度)
+  const mainColor = '#21ee9c';     // 主要文字顏色
+  const borderColor = '#f4d746dd'; // 上下細線顏色 (66 代表 40% 透明度)
+  const bgColor = '#f59f0b05';     // 背景暈染顏色 (1a 代表 10% 透明度)
 
   return (
     <div 
-      className="sticky top-20 z-50 max-w-[80vw] mx-auto mt-2 select-none backdrop-blur-md rounded-none border-y overflow-hidden shadow-lg"
+      className="sticky top-20 z-50 max-w-[65w] mx-auto mt-2 select-none backdrop-blur-md rounded-none border-y overflow-hidden shadow-lg"
       style={{ 
         borderColor: borderColor, 
         backgroundColor: bgColor
