@@ -12,6 +12,7 @@ export default function Navbar() {
 
   return (
     // 終極修正：背景色與邊框線完全由 var(--card-bg) 與 var(--card-border) 控制，與首頁完美同盟！
+    // 修改此處top- 可以修改公告距離導航列上方距離 
     <nav 
       className="sticky top-0 z-50 border-b transition-all duration-300 shadow-sm"
       style={{ 

@@ -2,10 +2,11 @@
 'use client';
 
 export default function Announcement() {
+  // 修改此處top- 可以修改公告距離導航列上方距離 
   return (
-    <div className="sticky top-0 z-50 w-full select-none backdrop-blur-md bg-amber-500/10 border-b overflow-hidden" style={{ borderColor: 'var(--card-border)' }}>
+    <div className="sticky top-16 z-50 w-full select-none backdrop-blur-md bg-amber-500/10 border-b overflow-hidden" style={{ borderColor: 'var(--card-border)' }}>
       {/* 💡 跑馬燈軌道：利用 flex 和 animate-marquee 實現一行流暢無限橫向滑動 */}
-      <div className="w-full flex items-center h-10 text-xs font-bold text-amber-500 tracking-wide">
+      <div className="w-full flex items-center h-8 text-xs font-bold text-amber-500 tracking-wide">
         <span className="px-4 bg-slate-950/80 h-full flex items-center shrink-0 border-r z-20" style={{ borderColor: 'var(--card-border)' }}>📢 重要公告:</span>
         
         {/* 跑馬燈動畫本體 */}
