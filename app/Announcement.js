@@ -16,15 +16,14 @@ export default function Announcement() {
       }}
     >
       <div 
-        className="w-full flex items-center h-6 text-xs font-bold tracking-wide"
+        className="w-full flex items-center h-5 text-xs font-bold tracking-wide"
         style={{ color: mainColor }}
       >
         {/* 左側固定標籤 */}
         <span 
           className="pl-4 pr-4 bg-slate-950/80 h-full flex items-center shrink-0 border-r z-20"
           style={{ borderColor: borderColor }}
-        >
-          📢 重要公告:
+        >  📢 重要公告:
         </span>
         
         {/* 跑馬燈無限循環賽道 */}
