@@ -9,7 +9,7 @@ export default function Announcement() {
 
   return (
     <div 
-      className="sticky top-28 z-50 max-w-[67.5vw] mx-auto mt-2 select-none backdrop-blur-md rounded-none border-y overflow-hidden shadow-lg"
+      className="sticky top-28 z-50 max-w-[72vw] mx-auto mt-2 select-none backdrop-blur-md rounded-none border-y overflow-hidden shadow-lg"
       style={{ 
         borderColor: borderColor, 
         backgroundColor: bgColor
