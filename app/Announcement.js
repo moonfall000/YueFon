@@ -3,9 +3,9 @@
 
 export default function Announcement() {
   // 🎨 十六進位色碼控制面板（你可以隨時修改這 6 個字元的色碼）
-  const mainColor = '#26fff4f0';     // 主要文字顏色
+  const mainColor = '#e6cf06f0';     // 主要文字顏色
   const borderColor = '#fff53bed'; // 上下細線顏色 (66 代表 40% 透明度)
-  const bgColor = '#1ef4f406';     // 背景暈染顏色 (1a 代表 10% 透明度)
+  const bgColor = '#f8ed1baf';     // 背景暈染顏色 (1a 代表 10% 透明度)
 
   return (
     <div 
