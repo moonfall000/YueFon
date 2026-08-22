@@ -28,3 +28,5 @@ git commit -m "style: embed marquee announcement into native client root layout"
 git commit -m "修正公告距離上方位置避免擋住導航列"
 git commit -m "新增金黃色細線在公告欄上下 拔除圓角"
 git commit -m "改變顏色及撰寫方式"
+//2026/8/22 下午 繼續微調公告欄
+git commit -m "繼續微調公告欄"
