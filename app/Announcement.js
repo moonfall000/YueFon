@@ -9,14 +9,14 @@ export default function Announcement() {
 
   return (
     <div 
-      className="sticky top-20 z-30 max-w-[67.5vw] mx-auto mt-2 select-none backdrop-blur-md rounded-none border-y overflow-hidden shadow-lg"
+      className="sticky top-20 z-50 max-w-[67.5vw] mx-auto mt-2 select-none backdrop-blur-md rounded-none border-y overflow-hidden shadow-lg"
       style={{ 
         borderColor: borderColor, 
         backgroundColor: bgColor
       }}
     >
       <div 
-        className="w-full flex items-center h-9 text-xs font-bold tracking-wide"
+        className="w-full flex items-center h-6 text-xs font-bold tracking-wide"
         style={{ color: mainColor }}
       >
         {/* 左側固定標籤 */}
