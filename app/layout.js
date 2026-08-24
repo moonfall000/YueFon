@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
     <html lang="zh-TW" className="scroll-smooth dark">
       <body className="flex flex-col min-h-screen">
         <Navbar />
-        <Announcement />
+        {/*<Announcement />*/}
         <main className="flex-grow">
           {children}
         </main>

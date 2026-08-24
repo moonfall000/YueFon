@@ -104,21 +104,18 @@ export const tabinfo = {
   },
   技能: {
     content: [
-      "Onshape",
-      "Blender",
+      "3D建模、簡易3D動畫：Onshape、Blender",
       "C",
-      "Vibe-coding",
+      "Vibe-coding：Next.js/React",
       "Minecraft紅石機關、指令(Java)",
-      "3D列印",
-      "簡易3D動畫",
-      "CNC機台",
-      "雷射雕刻機",
+      "3D列印：PLA、ABS、PA6-CF",
+      "CNC機台、雷射雕刻機",
       "網頁設計入門"
     ]
   },
   團隊: {
     content: [
-      "113學年度擔任 中和資訊研究社 - 教學",
+      "113學年度 中和資訊研究社 - 教學",
       "2025賽季中和FRC機器人校隊 - 副隊長",
       "2025賽季中和FRC機器人校隊 - 機構組組長",
       "2026賽季中和FRC機器人校隊 - Driver Team Coach",
@@ -133,7 +130,9 @@ export const tabinfo = {
       "傳說對決",
       "極速領域",
       "貓咪大戰爭",
+      "Pokemon GO",
       "菇勇者傳說",
+      "台域戰策",
       "元氣騎士",
       "其他一些小遊戲"
     ]
@@ -162,6 +161,8 @@ export const tabinfo = {
   },
   看好股票: {
     content: [
+      "信驊",
+      "川湖",
       "台積電",
       "台達電",
       "台光電",
