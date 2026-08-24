@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { hero, about, project, contest, social, tabinfo, friends } from '../config';
 import { Analytics } from "@vercel/analytics/next"
 import Announcement from './Announcement';
+import CounterButton from '../components/CounterButton.js';
 
 // 💡 頭像網址（你可以隨時換成你親手連好的正確子網址）
 const avatarUrl = "https://yue-fon.vercel.app/YueFon.svg";
