@@ -23,22 +23,20 @@ export default function Home() {
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">{hero.title}</h1>
           <p className="text-xl max-w-2xl mb-6 opacity-80">{hero.subtitle}</p>
           
-          <div className="mb-6 flex justify-center md:justify-start items-center gap-3">
+<div className="mb-6 flex justify-center md:justify-start items-center gap-3">
             <button 
-              onClick={() => {
+              onClick={async () => {
                 const nextCount = weakCount + 1;
                 setWeakCount(nextCount);
-                if (nextCount === 10) alert("🎉 恭喜！您是第"(nextCount),"位簽到者！");
-                if (nextCount === 50) alert("🎉 恭喜！您是第"(nextCount),"位簽到者！");
-                if (nextCount === 100) alert("🎉 恭喜！您是第"(nextCount),"位簽到者！");
-                if (nextCount === 200) alert("🎉 恭喜！您是第"(nextCount),"位簽到者！");
-                if (nextCount === 500) alert("🎉 恭喜！您是第"(nextCount),"位簽到者！");
+                if (nextCount === 10) alert(`🎉 恭喜！您是第 ${nextCount} 位簽到者！`);
+                if (nextCount === 50) alert(`🎉 恭喜！您是第 ${nextCount} 位簽到者！`);
+                if (nextCount === 100) alert(`🎉 恭喜！您是第 ${nextCount} 位簽到者！`);
+                if (nextCount === 200) alert(`🎉 恭喜 ${nextCount} 位簽到者！`);
+                if (nextCount === 500) alert(`🎉 恭喜 ${nextCount} 位簽到者！`);
               }}
-              className="px-3 py-1.5 text-xs font-bold rounded-full border bg-emerald-500/10 text-emerald-500 border-emerald-500/20 hover:bg-emerald-500/20 active:scale-95 transition-all duration-200"
-            >
-              點擊簽到 累計人數：{weakCount} 人
-            </button>
-             <CounterButton />
+              className="hidden" 
+            />
+            <CounterButton />
           </div>
 
           <div className="flex justify-center md:justify-start gap-4 text-sm font-medium">

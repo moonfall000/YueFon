@@ -429,7 +429,7 @@ export default function Game() {
     const fetchAllPlayersAndRank = async () => {
       let mergedList = [];
       try {
-        const { supabase } = await import('./supabase');
+        const { supabase } = await import('../../supabase');
         const { data, error } = await supabase.from('profiles').select('username, power, id').order('power', { ascending: false });
         if (!error && data) {
           mergedList = data.map(p => ({ name: p.username, power: p.power, isPlayer: p.id === user.id }));
