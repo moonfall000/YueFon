@@ -28,12 +28,17 @@ export default function Home() {
               onClick={() => {
                 const nextCount = weakCount + 1;
                 setWeakCount(nextCount);
-                if (nextCount === 100) alert("🎉 恭喜！您已成功認證低調裝弱行為！");
+                if (nextCount === 10) alert("🎉 恭喜！您是第"(nextCount),"位簽到者！");
+                if (nextCount === 50) alert("🎉 恭喜！您是第"(nextCount),"位簽到者！");
+                if (nextCount === 100) alert("🎉 恭喜！您是第"(nextCount),"位簽到者！");
+                if (nextCount === 200) alert("🎉 恭喜！您是第"(nextCount),"位簽到者！");
+                if (nextCount === 500) alert("🎉 恭喜！您是第"(nextCount),"位簽到者！");
               }}
               className="px-3 py-1.5 text-xs font-bold rounded-full border bg-emerald-500/10 text-emerald-500 border-emerald-500/20 hover:bg-emerald-500/20 active:scale-95 transition-all duration-200"
             >
-              點擊證明玥楓真的很弱 弱化層數：{weakCount} 層
+              點擊簽到 累計人數：{weakCount} 人
             </button>
+             <CounterButton />
           </div>
 
           <div className="flex justify-center md:justify-start gap-4 text-sm font-medium">
